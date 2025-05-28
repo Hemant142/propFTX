@@ -10,7 +10,7 @@ export default function AllRoutes({ search, setSearch }) {
   const navigate = useNavigate();
   return (
     <Routes>
-      <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Login />} />
       <Route path="/signup" element={<Signup />} />
       {/* Admin routes */}
       <Route element={<PrivateRoutes role="admin" />}> 
@@ -21,7 +21,7 @@ export default function AllRoutes({ search, setSearch }) {
         <Route path="/user" element={<UserDashboard search={search} setSearch={setSearch} />} />
       </Route>
       {/* Default route */}
-      <Route path="*" element={navigate("/login")} />
+      {/* <Route path="*" element={navigate("/")} /> */}
     </Routes>
   );
 }

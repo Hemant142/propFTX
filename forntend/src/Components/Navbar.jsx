@@ -31,7 +31,7 @@ export default function Navbar({ search, setSearch }) {
 
   const handleLogout = () => {
     logout();
-    navigate('/login');
+    navigate('/');
   };
 
   // Only show search bar on /user route and not on mobile
@@ -41,7 +41,7 @@ export default function Navbar({ search, setSearch }) {
   const menuItems = [
     user && user.role === 'admin' && { label: 'Admin Dashboard', onClick: () => navigate('/admin') },
     user && user.role === 'user' && { label: 'User Dashboard', onClick: () => navigate('/user') },
-    !user && { label: 'Login', onClick: () => navigate('/login') },
+    !user && { label: 'Login', onClick: () => navigate('/') },
     !user && { label: 'Signup', onClick: () => navigate('/signup') },
     user && { label: 'Logout', onClick: handleLogout },
   ].filter(Boolean);
@@ -130,7 +130,7 @@ export default function Navbar({ search, setSearch }) {
                 </>
               ) : (
                 <>
-                  <Button color="inherit" sx={{ color: '#ff9800', fontWeight: 600 }} onClick={() => navigate('/login')}>Login</Button>
+                  <Button color="inherit" sx={{ color: '#ff9800', fontWeight: 600 }} onClick={() => navigate('/')}>Login</Button>
                   <Button color="inherit" sx={{ color: '#fff', fontWeight: 600, ml: 2, bgcolor: '#ff9800', borderRadius: 2 }} onClick={() => navigate('/signup')}>Signup</Button>
                 </>
               )}

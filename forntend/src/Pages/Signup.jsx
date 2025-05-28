@@ -23,7 +23,7 @@ export default function Signup() {
       const data = await res.json();
       if (res.ok) {
         setSuccess('Signup successful! Please login.');
-        setTimeout(() => navigate('/login'), 1500);
+        setTimeout(() => navigate('/'), 1500);
       } else {
         setError(data.message || 'Signup failed');
       }
@@ -103,7 +103,7 @@ export default function Signup() {
             Signup
           </Button>
         </form>
-        <Button color="secondary" fullWidth sx={{ mt: 2, color: '#ff9800', fontWeight: 600 }} onClick={() => navigate('/login')}>
+        <Button color="secondary" fullWidth sx={{ mt: 2, color: '#ff9800', fontWeight: 600 }} onClick={() => navigate('/')}>
           Already have an account? Login
         </Button>
       </Paper>
