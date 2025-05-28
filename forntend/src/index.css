@@ -1,0 +1,86 @@
+/* :root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+} */
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #23272f 60%, #ff9800 100%);
+  color: #fff;
+  font-family: 'Segoe UI', 'Roboto', 'Avenir', 'Helvetica', Arial, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #23272f;
+}
+::-webkit-scrollbar-thumb {
+  background: #ff9800;
+  border-radius: 8px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #ff9800;
+  font-weight: 700;
+}
+
+a {
+  color: #ff9800;
+  text-decoration: none;
+}
+a:hover {
+  color: #fff;
+}
+
+.MuiContainer-root {
+  background: rgba(35, 39, 47, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.17);
+}
+
+.MuiCard-root {
+  background: linear-gradient(135deg, #23272f 60%, #ff9800 100%) !important;
+  color: #fff !important;
+}
+
+@media (max-width: 900px) {
+  .MuiGrid-item {
+    max-width: 50% !important;
+    flex-basis: 50% !important;
+  }
+}
+@media (max-width: 600px) {
+  .MuiGrid-item {
+    max-width: 100% !important;
+    flex-basis: 100% !important;
+  }
+  .MuiContainer-root {
+    border-radius: 0;
+    padding: 0 0.5rem !important;
+  }
+}
+
+/* @media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */
