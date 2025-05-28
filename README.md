@@ -93,8 +93,11 @@ npm run dev
 
 ---
 
+## 🔑 Admin Panel Credentials
+- **Email:** admin123@gmail.com
+- **Password:** admin123
 
-
+---
 
 ## 🙏 Acknowledgements
 - [Material-UI](https://mui.com/)
