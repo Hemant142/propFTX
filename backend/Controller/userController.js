@@ -7,7 +7,7 @@ import User from '../Model/userModel.js';
 const userRouter = express.Router();
 
 
-const JWT_SECRET = process.env.JWT_SECRET || "your_jwt_secret";
+const JWTSECRET = process.env.JWTSECRET || "propftx";
 
 export const signup = async (req, res) => {
   try {
@@ -47,7 +47,7 @@ export const login = async (req, res) => {
     if (!isMatch) {
       return res.status(401).json({ message: "Invalid credentials." });
     }
-    const token = jwt.sign({ userId: user._id, email: user.email, role: user.role }, JWT_SECRET, { expiresIn: "1d" });
+    const token = jwt.sign({ userId: user._id, email: user.email, role: user.role }, JWTSECRET, { expiresIn: "1d" });
     return res.status(200).json({ message: "Login successful.", token ,user});
   } catch (error) {
     return res.status(500).json({ message: "Server error.", error: error.message });
